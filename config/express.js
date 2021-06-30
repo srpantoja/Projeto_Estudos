@@ -6,6 +6,7 @@ let ProductRouter = require('../app/routes/product.js')
 let cors = require('cors')
 
 module.exports = function() {
+
     let app = express()
     app.set("port", process.env.PORT || 5000)
     app.use(cors())
@@ -16,5 +17,6 @@ module.exports = function() {
     ClientRouter(app)
     //ServiceRouter(app)
     //ProductRouter(app)
+    
     return app
 }
