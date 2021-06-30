@@ -16,5 +16,5 @@ module.exports = function(){
             }
         }
     )
-    return mongoose.model('Service', schema);
+    return mongoose.model('service', schema);
 }()

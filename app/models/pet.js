@@ -36,5 +36,5 @@ module.exports = function () {
             }
         }
     )
-    return mongoose.model('Pet', schema);
+    return mongoose.model('pet', schema);
 }()

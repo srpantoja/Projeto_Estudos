@@ -4,19 +4,19 @@ module.exports = function(){
         {
             idClient: {
                 type: mongoose.Schema.ObjectId,
-                ref: 'Client'
+                ref: 'client'
             },
             idPet: {
                 type: mongoose.Schema.ObjectId,
-                ref: 'Pet'
+                ref: 'pet'
             }, 
             idService: {
                 type: mongoose.Schema.ObjectId,
-                ref: 'Service'
+                ref: 'service'
             } ,
             idProduct : {
                 type: mongoose.Schema.ObjectId,
-                ref: 'Product',
+                ref: 'product',
                 required: false
             },
             date: {
@@ -25,5 +25,5 @@ module.exports = function(){
             }
         }
     )
-    return mongoose.model('Query', schema);
+    return mongoose.model('query', schema);
 }()

@@ -3,26 +3,26 @@ module.exports = function(){
     const schema = mongoose.Schema(
         {
             name: {
-                type: String,
+                type: "String",
                 required: true
             },
             cpf: {
-                type: String,
+                type: "String",
                 required: true
             } , 
             rg: {
-                type: String,
+                type: "String",
                 required: true
             } ,
             cellNumber: {
-                type: String,
+                type: "String",
                 required: true
             } ,
             email: {
-                type: String,
+                type: "String",
                 required: true
             }   
         }
     )
-    return mongoose.model('Client', schema);
+    return mongoose.model('client', schema);
 }()

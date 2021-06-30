@@ -20,5 +20,5 @@ module.exports = function(){
             }
         }
     )
-    return mongoose.model('Product', schema);
+    return mongoose.model('product', schema);
 }()

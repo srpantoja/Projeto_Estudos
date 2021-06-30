@@ -24,4 +24,18 @@ module.exports.ListOfClient = function(req,res){
         }
  );
  }
+const ClientModel = require('../models/client')
+const view = require('../views/client')
  
+ module.exports.addClient = (req, res) => {
+    let client = req.body
+    let promise = ClientModel.create(client)
+    
+    
+    promise.then((client)=>{
+        res.status(201).json(view.render(client))
+    }).catch((error)=>{
+        res.status(400).json({message: error})
+    })
+    console.log(promise)
+}
